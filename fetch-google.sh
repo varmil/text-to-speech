@@ -1,7 +1,9 @@
 #!/bin/sh
 
+cd `dirname $0`
+
 db=$1
-query="SELECT word FROM words;"
+query="SELECT word FROM words where level = ${2};"
 
 saveDir="./pron/"
 
